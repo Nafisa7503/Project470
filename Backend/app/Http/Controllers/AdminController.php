@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateAdminRequest;
 
@@ -23,9 +24,14 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $admin=Admin::create([
+            'name' => $request->input('name'),
+            'contact' => $request->input('contact'),
+            'email' =>$request->input('email'),
+            'password' => Hash::make($request->input('password'))
+        ]);
     }
 
     /**
