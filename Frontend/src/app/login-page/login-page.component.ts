@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Login } from './login-page.module'; // Adjust the import path
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  styleUrls: ['./login-page.component.css']
 })
-export class LoginPageComponent {
+export class LoginPageComponent implements OnInit {
+  login = new Login();
 
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  loginUser() {
+    console.log(this.login);
+  }
+}
+
+function page() {
+  throw new Error('Function not implemented.');
 }

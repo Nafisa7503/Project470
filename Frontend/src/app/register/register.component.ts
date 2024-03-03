@@ -1,20 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Register } from './register.module'; // Adjust the import path
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css'] // Use 'styleUrls' instead of 'styleUrl'
 })
-export class RegisterComponent {
-  name=""
-  email=""
-  contact=""
-  password=""
-  register(){
-    console.log(this.name)
+export class RegisterComponent implements OnInit {
+  register = new Register();
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  registerUser() {
+    console.log(this.register);
   }
 }
