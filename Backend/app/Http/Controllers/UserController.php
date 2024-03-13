@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
-    public function create(Request $request)
+    public function register(Request $request)
     {
         $user=User::create([
             'name' => $request->input('name'),
@@ -14,6 +15,6 @@ class UserController extends Controller
             'email' =>$request->input('email'),
             'password' => Hash::make($request->input('password')) 
         ]);
-    
+        return response()->json("success");
     }
 }
