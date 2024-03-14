@@ -1,0 +1,7 @@
+body {
+    background-image: ('assets/homepage.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center; /* Positions the background image at the center */
+  }
+  
