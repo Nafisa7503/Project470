@@ -21,3 +21,4 @@ describe('AttractionsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+//ne
