@@ -1,0 +1,55 @@
+.weather-factors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns, equal width */
+  gap: 80px; /* Spacing between cards */
+  align-items: center;
+  width: 1400px;
+}
+
+
+.weather-factors-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Remove display: flex; */  /* Not needed for grid layout */
+  width: unset; /* Remove fixed width if set */
+  align-items: center;
+}
+
+
+.weather-factors-content {
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  align-items:center; /* Align content to the start (left) */
+}
+
+
+.weather-factors-card img {
+  width: 400px; /* Adjust width as needed */
+  height: 300px;
+  object-fit: cover;
+  align-items: center;
+}
+
+.weather-factors-info {
+  padding: 16px;
+  display: none; /* Initially hide info sections */
+  order: 2; /* Move description below button */
+}
+
+.weather-factors-info.show {
+  display: block; /* Show info on button click */
+}
+button {
+  border: 1px solid #ccc; /* 1px width, solid style, gray color */
+  padding: 10px 20px; /* Adjust padding if needed */
+  background-color: #fff;
+  cursor: pointer; /* Indicate clickable behavior */
+  color: blue;
+  order: 1; /* Keep button below card content */
+  margin: 0 auto; /* Center buttons horizontally within content area */
+  display: flex; /* Enable flexbox for buttons */
+  justify-content: center; /* Center buttons horizontally within container */
+  margin-top: 10px; /* Add margin for spacing between image and buttons */
+  width: 400px
+}

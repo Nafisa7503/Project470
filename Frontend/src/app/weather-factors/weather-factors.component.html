@@ -1,0 +1,145 @@
+<div class="weather-factors-grid">
+
+  <div class="weather-factors-card">
+    <div class="weather-factors-content">
+      <img src="{{ weatherfactors[0].image }}" alt="{{ weatherfactors[0].name }}">
+      <h3>{{ weatherfactors[0].name }}</h3>
+    </div>
+    <button (click)="toggleInfo('bestSeason')">Best Season</button>
+    <div class="weather-factors-info" id="bestSeason">
+      <h4>Best Season:</h4>
+      <p>{{ weatherfactors[0].bestSeason }}</p>
+    </div>
+    <button (click)="toggleInfo('uvInfo')">UV Index</button>
+    <div class="weather-factors-info" id="uvInfo">
+      <h4>UV Index: {{ weatherfactors[0].uvIndex }}</h4>
+      <p>Description: {{ weatherfactors[0].uvIndexDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('uvInfo')">UV Index</button> -->
+
+    <button (click)="toggleInfo('sunscreenInfo')">Sunscreen Recommendation</button>
+    <div class="weather-factors-info" id="sunscreenInfo">
+      <h4>Sunscreen Recommendation: SPF {{ weatherfactors[0].sunscreenSpf }}</h4>
+      <p>Description: {{ weatherfactors[0].sunscreenDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('sunscreenInfo')">Sunscreen Recommendation</button> -->
+
+    <button (click)="toggleInfo('healthAdviceInfo')">Health Advice</button>
+    <div class="weather-factors-info" id="healthAdviceInfo">
+      <h4>Health Advice:</h4>
+      <p>{{ weatherfactors[0].healthAdvice }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('healthAdviceInfo')">Health Advice</button> -->
+  </div>
+
+
+
+
+
+  <div class="weather-factors-card">
+    <div class="weather-factors-content">
+      <img src="{{ weatherfactors[1].image }}" alt="{{ weatherfactors[1].name }}">
+      <h3>{{ weatherfactors[1].name }}</h3>
+    </div>
+    <button (click)="toggleInfo('bestSeason1')">Best Season</button>
+    <div class="weather-factors-info" id="bestSeason1">
+      <h4>Best Season:</h4>
+      <p>{{ weatherfactors[1].bestSeason }}</p>
+    </div>
+    <button (click)="toggleInfo('uvInfo1')">UV Index</button>
+    <div class="weather-factors-info" id="uvInfo1">
+      <h4>UV Index: {{ weatherfactors[1].uvIndex }}</h4>
+      <p>Description: {{ weatherfactors[1].uvIndexDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('uvInfo')">UV Index</button> -->
+
+    <button (click)="toggleInfo('sunscreenInfo1')">Sunscreen Recommendation</button>
+    <div class="weather-factors-info" id="sunscreenInfo1">
+      <h4>Sunscreen Recommendation: SPF {{ weatherfactors[1].sunscreenSpf }}</h4>
+      <p>Description: {{ weatherfactors[1].sunscreenDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('sunscreenInfo')">Sunscreen Recommendation</button> -->
+
+    <button (click)="toggleInfo('healthAdviceInfo1')">Health Advice</button>
+    <div class="weather-factors-info" id="healthAdviceInfo1">
+      <h4>Health Advice:</h4>
+      <p>{{ weatherfactors[1].healthAdvice }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('healthAdviceInfo')">Health Advice</button> -->
+  </div>
+
+
+
+
+
+
+
+  <div class="weather-factors-card">
+    <div class="weather-factors-content">
+      <img src="{{ weatherfactors[2].image }}" alt="{{ weatherfactors[2].name }}">
+      <h3>{{ weatherfactors[2].name }}</h3>
+    </div>
+    <button (click)="toggleInfo('bestSeason2')">Best Season</button>
+    <div class="weather-factors-info" id="bestSeason2">
+      <h4>Best Season:</h4>
+      <p>{{ weatherfactors[2].bestSeason }}</p>
+    </div>
+    <button (click)="toggleInfo('uvInfo2')">UV Index</button>
+    <div class="weather-factors-info" id="uvInfo2">
+      <h4>UV Index: {{ weatherfactors[2].uvIndex }}</h4>
+      <p>Description: {{ weatherfactors[2].uvIndexDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('uvInfo')">UV Index</button> -->
+
+    <button (click)="toggleInfo('sunscreenInfo2')">Sunscreen Recommendation</button>
+    <div class="weather-factors-info" id="sunscreenInfo2">
+      <h4>Sunscreen Recommendation: SPF {{ weatherfactors[2].sunscreenSpf }}</h4>
+      <p>Description: {{ weatherfactors[2].sunscreenDescription }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('sunscreenInfo')">Sunscreen Recommendation</button> -->
+
+    <button (click)="toggleInfo('healthAdviceInfo2')">Health Advice</button>
+    <div class="weather-factors-info" id="healthAdviceInfo2">
+      <h4>Health Advice:</h4>
+      <p>{{ weatherfactors[2].healthAdvice }}</p>
+    </div>
+    <!-- <button (click)="toggleInfo('healthAdviceInfo')">Health Advice</button> -->
+  </div>
+
+
+
+
+
+
+<div class="weather-factors-card">
+  <div class="weather-factors-content">
+    <img src="{{ weatherfactors[3].image }}" alt="{{ weatherfactors[3].name }}">
+    <h3>{{ weatherfactors[3].name }}</h3>
+  </div>
+  <button (click)="toggleInfo('bestSeason3')">Best Season</button>
+  <div class="weather-factors-info" id="bestSeason3">
+    <h4>Best Season:</h4>
+    <p>{{ weatherfactors[3].bestSeason }}</p>
+  </div>
+  <button (click)="toggleInfo('uvInfo3')">UV Index</button>
+  <div class="weather-factors-info" id="uvInfo3">
+    <h4>UV Index: {{ weatherfactors[3].uvIndex }}</h4>
+    <p>Description: {{ weatherfactors[3].uvIndexDescription }}</p>
+  </div>
+  <!-- <button (click)="toggleInfo('uvInfo')">UV Index</button> -->
+
+  <button (click)="toggleInfo('sunscreenInfo3')">Sunscreen Recommendation</button>
+  <div class="weather-factors-info" id="sunscreenInfo3">
+    <h4>Sunscreen Recommendation: SPF {{ weatherfactors[3].sunscreenSpf }}</h4>
+    <p>Description: {{ weatherfactors[3].sunscreenDescription }}</p>
+  </div>
+  <!-- <button (click)="toggleInfo('sunscreenInfo')">Sunscreen Recommendation</button> -->
+
+  <button (click)="toggleInfo('healthAdviceInfo3')">Health Advice</button>
+  <div class="weather-factors-info" id="healthAdviceInfo3">
+    <h4>Health Advice:</h4>
+    <p>{{ weatherfactors[3].healthAdvice }}</p>
+  </div>
+  <!-- <button (click)="toggleInfo('healthAdviceInfo')">Health Advice</button> -->
+</div>
+</div>

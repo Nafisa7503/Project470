@@ -1,22 +1,33 @@
-import { Component, OnInit } from '@angular/core';
-import { Register } from './register.module'; // Adjust the import path
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,RouterModule,HttpClientModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'] // Use 'styleUrls' instead of 'styleUrl'
+  styleUrl: './register.component.css'
 })
-export class RegisterComponent implements OnInit {
-  register = new Register();
+export class RegisterComponent {
+  name=""
+  email=""
+  contact=""
+  password=""
 
-  constructor() {}
+  constructor(private http: HttpClient)
+  {}
 
-  ngOnInit(): void {}
+  register(){
+   let data = {"name": this.name, "email": this.email, "contact": this.contact, "password": this.password}
+   this.http.post("http://localhost:8000/api/register",data).subscribe((resultData: any)=> 
+    {
 
-  registerUser() {
-    console.log(this.register);
+        console.log(resultData)
+        // this.router.navigate(['/login'])
+
+    });
   }
 }

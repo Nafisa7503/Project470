@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { FormsModule } from '@angular/forms';  // Import FormsModule
-import { HttpClientModule } from '@angular/common/http';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule and ReactiveFormsModule here
+//import { TravelPackageComponent } from './travel-package/travel-package.component';
+//import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent],
+  declarations: [
+    //TravelPackageComponent
+  ],
   imports: [
     CommonModule,
-    FormsModule,  // Add this line
-    HttpClientModule,
-    LoginPageComponent
+    FormsModule,
+    ReactiveFormsModule // Include ReactiveFormsModule here
+  ],
+  exports: [
+    //TravelPackageComponent,
+    //ProfileComponent
   ]
 })
-export class AppModuleModule { }
+export class AppModule { }
